@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#header {
+  position: fixed;
+  width: 10%;
+  height: 50%;
+  background-color: blue;
+
+
+}
+
+#header i {
+  margin-top: 1em;
+  margin-left: 1em;
+  color: antiquewhite;
+
+}
+
+
+#header h1 {
+  margin-left: 10%;
+  margin-top: 20%;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  vertical-align: text-top;
+  color: white;
+}
+
+#container h1{
+  color: white;
+ margin-left: 5%;
+}
+
+#side-menu {
+  position: fixed;
+  left: -50vw;
+  width: 50vw;
+  height: 100vh;
+  background-color:blue
+}
+
+#side-menu a{
+  color: white;
+  margin-left: 5%;
+}
+
+#side-menu i {
+  margin-top: 1em;
+  margin-left: 1em;
+  color: black;
+}
+
+
+.side-menu-open {
+  transition: all 1s;
+  transform: translateX(50vw);
+}
+
+.side-menu-close {
+  transition: all 1s;
+  transform: translateX(-50vw);
+}
+
+
+#content {
+  width: 100vw;
+  height: 450vh;
+  background-image: url(../IMG/smoke-4.webp);
+
+
+}
+
+
+
+#content2 img {
+  width: 25%;
+  height: 40%;
+  object-fit: cover;
+  margin-left: 38%;
+  margin-top: 7%;
+
+
+}
+
+
+
+#content3 img {
+  width: 12%;
+  height: 40%;
+  object-fit: cover;
+  margin-left: 16.5%;
+  margin-top: 5%;
+
+
+}
+
+#content4 img {
+  width: 25%;
+  height: 50%;
+  object-fit: cover;
+  margin-left: 38%;
+  margin-top: 18%
+}
+
+
+#content5 img {
+  width: 12%;
+  height: 40%;
+  object-fit: cover;
+  margin-left: 16.5%;
+  margin-top: 5%;
+}
+
+#content6 img {
+  width: 25%;
+  height: 50%;
+  object-fit: cover;
+  margin-left: 38%;
+  margin-top: 8%
+}
+
+#content7 img {
+  width: 12%;
+  height: 40%;
+  object-fit: cover;
+  margin-left: 16.5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .content5 {
+        width: 40px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .content5 {
+        width: 30vw;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .content5 {
+            width: 20vw;
+    }
+    }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+}
+
+
+
