@@ -6,7 +6,7 @@
 *Esta herramienta digital forma parte del catálogo de herramientas del **Banco Interamericano de Desarrollo**. Puedes conocer más sobre la iniciativa del BID en [code.iadb.org](https://code.iadb.org)*
 
 <h1 align="center"> SmookeZone</h1>
-<p align="center"><img src="[[https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.estancomoratalaz.es%2Flista-productos%2Fkartel-ref100088484.html&psig=AOvVaw3LmfnF49WhMmUwzTf1l9ZP&ust=1700251724941000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCPDPv8GpyYIDFQAAAAAdAAAAABAd]"/></p> 
+<p align="center"><img src="[https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.estancomoratalaz.es%2Flista-productos%2Fkartel-ref100088484.html&psig=AOvVaw3LmfnF49WhMmUwzTf1l9ZP&ust=1700251724941000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCPDPv8GpyYIDFQAAAAAdAAAAABAd]"/></p> 
 
 ## Tabla de contenidos:
 ---
