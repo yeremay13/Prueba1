@@ -5,10 +5,10 @@
 
 ## Tabla de contenidos:
 ---
-- [Descripción y contexto](#Description and context)
-- [User Guide](#User Guide)
+- [Descripción y contexto](#Description_context)
+- [User Guide](#User_Guide)
 - [Author](#Author)
-- [Additional information](#Additional Information)
+- [Additional information](#Additional_Information)
   
 ## Description and context
 ---
