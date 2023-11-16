@@ -1,0 +1,58 @@
+let suggestion = [
+  
+
+];
+
+function initialize(){
+  const SUGGESTION_FORM = document.getElementById("suggestion-form");
+  SUGGESTION_FORM.addEventListener("submit", addSuggestion);
+
+  showSuggestion();
+}
+
+function addSuggestion(event){
+event.preventDefault();
+
+  const BRAND = event.target.brand.value;
+  const MODEL = event.target.model.value;
+
+  if(BRAND == ""){
+    let BRAND_ERROR = document.getElementById("brand-error")
+    BRAND_ERROR.style.visibility ="visible";
+  }
+
+
+  suggestion.push({
+    brand: BRAND,
+    model: MODEL
+  })
+
+  showSuggestion();
+
+}
+
+function showSuggestion() {
+  const SUGGESTION_FORM = document.getElementById("suggestion-list");
+  let allSuggestion = "";
+
+  for(let i =0;i<suggestion.length; i++)
+    allSuggestion = allSuggestion + `<li>${suggestion[i].brand} / ${suggestion[i].model}<button onclick="deleteSuggestion(${i})"> DELETE<BUTTON><button onclick="editSuggestion(${i})"> EDIT<BUTTON></li>` ;
+
+  SUGGESTION_FORM.innerHTML = allSuggestion
+
+}
+
+function editSuggestion(suggestionID){
+  suggestion.reverse(suggestionID,1);
+
+  showSuggestion();
+}
+
+function deleteSuggestion(suggestionID){
+  suggestion.splice(suggestionID,1);
+
+  showSuggestion();
+  
+}
+
+initialize();
