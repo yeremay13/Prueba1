@@ -1,0 +1,38 @@
+
+body {
+    margin: 0;
+    min-height: 100vh; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url(../IMG/Tabaco.jpg)
+    
+    }
+
+.bg-image{
+    background-repeat: no-repeat;
+
+}
+
+
+
+.left-side {
+    
+    padding: 1em;
+    margin-top: 1em;
+    margin-left: auto;
+
+
+}
+
+.left-side:hover {
+    border-style: double;
+    border-color: white;
+}
+
+#brand-error {
+    visibility: hidden;
+    color: red;
+
+}
