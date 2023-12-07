@@ -10,32 +10,39 @@
 </head>
 
 <body>
-  
+
   <div class="container">
-    
+
     <div class="col-sm-12">
       <div class="left-side">
         <form id="suggestion-form" action="index2.html">
           <div class="mb-3 mt-3">
             <label for="brand" class="form-label text-white">Shisha Flavour 1:</label>
             <input type="text" class="form-control" id="brand" placeholder=" Enter" name="brand">
-            <span id="brand-error">*Field Requeried</span>
+            <span id="brand-error">*Field Required</span>
           </div>
           <div class="mb-3">
             <label for="model" class="form-label text-white">Shisha Flavour 2:</label>
             <input type="text" class="form-control" id="model" placeholder="Enter " name="model">
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="mb-3">
+            <label for="Shisha-Flavour3" class="form-label text-white">Shisha Flavour 3:</label>
+            <input type="text" class="form-control" id="Shisha-Flavour3" placeholder="Enter" name="Shisha-Flavour3">
+          </div>
+          <div class="mb-3">
+            <label for="Shisha-Flavour4" class="form-label text-white">Shisha Flavour 4:</label>
+            <textarea class="form-control" id="Shisha-Flavour4" placeholder="Enter" name="Shisha-Flavour4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enter mix</button>
         </form>
       </div>
-
 
     </div>
 
     <div class="row">
       <div class="col-sm-12">
         <div class="left-side text-white">
-          <h2 >Mixes Suggestion List</h2>
+          <h2>Mixes Suggestion List</h2>
           <ul id="suggestion-list">
 
           </ul>
@@ -46,12 +53,11 @@
   </div>
 
   <!-- Latest compiled and minified CSS -->
-  
+
 
   <!-- Latest compiled JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="JS/side-menu2.js"></script>
-
 
 </body>
 
