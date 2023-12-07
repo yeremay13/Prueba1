@@ -1,58 +1,84 @@
-let suggestion = [
-  
+let suggestion = [];
 
-];
-
-function initialize(){
+function initialize() {
   const SUGGESTION_FORM = document.getElementById("suggestion-form");
   SUGGESTION_FORM.addEventListener("submit", addSuggestion);
 
+  loadSuggestion();
   showSuggestion();
 }
 
-function addSuggestion(event){
-event.preventDefault();
+function addSuggestion(event) {
+  event.preventDefault();
 
   const BRAND = event.target.brand.value;
   const MODEL = event.target.model.value;
+  const FLAVOR3 = event.target["Shisha-Flavour3"].value;
+  const FLAVOR4 = event.target["Shisha-Flavour4"].value;
 
-  if(BRAND == ""){
-    let BRAND_ERROR = document.getElementById("brand-error")
-    BRAND_ERROR.style.visibility ="visible";
+  if (BRAND === "") {
+    let BRAND_ERROR = document.getElementById("brand-error");
+    BRAND_ERROR.style.visibility = "visible";
+    return;
   }
-
 
   suggestion.push({
     brand: BRAND,
-    model: MODEL
-  })
+    model: MODEL,
+    flavor3: FLAVOR3,
+    flavor4: FLAVOR4,
+  });
 
+  saveSuggestion();
   showSuggestion();
-
+  event.target.reset();
 }
 
 function showSuggestion() {
   const SUGGESTION_FORM = document.getElementById("suggestion-list");
   let allSuggestion = "";
 
-  for(let i =0;i<suggestion.length; i++)
-    allSuggestion = allSuggestion + `<li>${suggestion[i].brand} / ${suggestion[i].model}<button onclick="deleteSuggestion(${i})"> DELETE<BUTTON><button onclick="editSuggestion(${i})"> EDIT<BUTTON></li>` ;
+  for (let i = 0; i < suggestion.length; i++) {
+    allSuggestion +=
+      `<li>${suggestion[i].brand} / ${suggestion[i].model} / ${suggestion[i].flavor3} / ${suggestion[i].flavor4}` +
+      `<button onclick="editSuggestion(${i})">EDIT</button>` +
+      `<button onclick="deleteSuggestion(${i})">DELETE</button></li>`;
+  }
 
-  SUGGESTION_FORM.innerHTML = allSuggestion
-
+  SUGGESTION_FORM.innerHTML = allSuggestion;
 }
 
-function editSuggestion(suggestionID){
-  suggestion.reverse(suggestionID,1);
+function editSuggestion(suggestionID) {
+  const editBrand = prompt("Edit brand:", suggestion[suggestionID].brand);
+  const editModel = prompt("Edit model:", suggestion[suggestionID].model);
+  const editFlavor3 = prompt("Edit Shisha-Flavour3:", suggestion[suggestionID].flavor3);
+  const editFlavor4 = prompt("Edit Shisha-Flavour4:", suggestion[suggestionID].flavor4);
 
+  if (editBrand !== null && editModel !== null && editFlavor3 !== null && editFlavor4 !== null) {
+    suggestion[suggestionID].brand = editBrand;
+    suggestion[suggestionID].model = editModel;
+    suggestion[suggestionID].flavor3 = editFlavor3;
+    suggestion[suggestionID].flavor4 = editFlavor4;
+    saveSuggestion();
+    showSuggestion();
+  }
+}
+
+function deleteSuggestion(suggestionID) {
+  suggestion.splice(suggestionID, 1);
+  saveSuggestion();
   showSuggestion();
 }
 
-function deleteSuggestion(suggestionID){
-  suggestion.splice(suggestionID,1);
+function saveSuggestion() {
+  localStorage.setItem("suggestion", JSON.stringify(suggestion));
+}
 
-  showSuggestion();
-  
+function loadSuggestion() {
+  const savedSuggestion = localStorage.getItem("suggestion");
+  if (savedSuggestion) {
+    suggestion = JSON.parse(savedSuggestion);
+  }
 }
 
 initialize();
