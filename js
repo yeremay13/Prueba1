@@ -3,6 +3,7 @@ function initialize(){
     headerMenuIcon.addEventListener("click", showSideMenu);
 }
 
+
 function showSideMenu(){
     const sideMenu = document.getElementById("side-menu");
     sideMenu.classList.remove("side-menu-close");
